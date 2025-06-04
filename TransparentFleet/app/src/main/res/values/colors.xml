@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#FFFFFF</color>
+    <color name="LightGray">#DBDBDB</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="blueTransperent">#90073EF8</color>
+    <color name="trasnBlue">#CC505e8f</color>
+
+
+    <color name="darkPink">#ffff4d69</color>
+    <color name="darkGreen">#ff3bb54a</color>
+    <color name="darkOrange">#ffdd7934</color>
+    <color name="darkRed">#ffe01616</color>
+    <color name="darkBlue">#ff313b5c</color>
+
+    <color name="blueBg">#ff505e8f</color>
+    <color name="txtColorBlue">#ff505e8f</color>
+    <color name="txtHintColor">#ff777777</color>
+    <color name="txtColorGray">#ff3e3e3e</color>
+    <color name="endColor">#ffc4e1f3</color>
+    <color name="centerColor">#ffffffff</color>
+    <color name="startColor">#ffffffff</color>
+    <color name="radioBg">#fff4f6f8</color>
+    <color name="radioLine">#ffc9c9cf</color>
+    <color name="orangeInfo">#ffe07316</color>
+    <color name="white_alpha_50">#a0ffffff</color>
+
+</resources>

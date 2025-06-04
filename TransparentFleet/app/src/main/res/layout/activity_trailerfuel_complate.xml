@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="TrailerCompletedModel"
+            type="com.transparent.fleet.model.TrailerCompletedModel" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+
+
+        <LinearLayout
+            android:id="@+id/llMian"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_margin="@dimen/_14sdp"
+                android:background="@drawable/white_round_bg"
+                android:gravity="bottom"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_26sdp"
+                    android:orientation="vertical">
+
+
+                    <ImageView
+                        android:layout_width="@dimen/_35sdp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_gravity="center_vertical|center"
+                        android:background="@drawable/complate_green" />
+
+                    <com.transparent.fleet.util.CustomTextViewBold
+                        android:id="@+id/ltrFuel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_18sdp"
+                        android:gravity="center"
+                        android:text="50 Litres fueled!"
+                        android:textColor="@color/darkGreen"
+                        android:textSize="@dimen/_20sdp" />
+
+                    <com.transparent.fleet.util.CustomTextView
+                        android:id="@+id/txtdate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:gravity="center"
+                        android:text="9:04 AM, Sunday, 9 May 2020"
+                        android:textColor="@color/txtColorGray"
+                        android:textSize="@dimen/_14sdp" />
+
+
+                    <com.transparent.fleet.util.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_25sdp"
+                        android:gravity="center"
+                        android:text="@string/atTotalHour"
+                        android:textColor="@color/darkPink"
+                        android:textSize="@dimen/_14sdp" />
+
+                    <com.transparent.fleet.util.CustomTextView
+                        android:id="@+id/txtHour"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:gravity="center"
+                        android:text="5231 Hours"
+                        android:textColor="@color/txtColorGray"
+                        android:textSize="@dimen/_14sdp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bottom_corner"
+                    android:paddingLeft="@dimen/_26sdp"
+                    android:paddingRight="@dimen/_26sdp"
+                    android:paddingBottom="@dimen/_20sdp"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:orientation="vertical">
+
+                    <com.transparent.fleet.util.CustomTextViewBold
+                        android:id="@+id/txtHistory"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_6sdp"
+                        android:background="@drawable/btn_disable"
+                        android:gravity="center"
+                        android:paddingTop="@dimen/_10sdp"
+                        android:paddingBottom="@dimen/_10sdp"
+                        android:text="@string/checkhistory"
+                        android:textColor="@color/txtColorBlue"
+                        android:textSize="@dimen/_15sdp" />
+
+                    <com.transparent.fleet.util.CustomTextViewBold
+                        android:id="@+id/txtFinish"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_6sdp"
+                        android:layout_marginBottom="@dimen/_6sdp"
+                        android:background="@drawable/btn_enable_darkgreen"
+                        android:gravity="center"
+                        android:paddingTop="@dimen/_10sdp"
+                        android:paddingBottom="@dimen/_10sdp"
+                        android:text="@string/finish"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_15sdp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+</layout>

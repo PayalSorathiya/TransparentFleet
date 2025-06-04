@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="FuelStationModel"
+            type="com.transparent.fleet.model.FuelStationModel" />
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/llMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@{FuelStationModel.isSelected?@drawable/radio_bg_selected:@drawable/radio_bg}"
+        android:gravity="center"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:padding="@dimen/_10sdp">
+
+        <ImageView
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:background="@{FuelStationModel.isSelected?@drawable/radio_selected:@drawable/radio_round}" />
+
+        <com.transparent.fleet.util.CustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:text="@{FuelStationModel.name}"
+            android:textColor="@{FuelStationModel.isSelected?@color/white:@color/black}"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+</layout>

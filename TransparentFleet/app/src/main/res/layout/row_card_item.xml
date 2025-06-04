@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="CardModel"
+            type="com.transparent.fleet.model.CardModel" />
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/llMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/editbox_default_border"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/_6sdp"
+        android:paddingRight="@dimen/_6sdp"
+        android:layout_marginBottom="@dimen/_10sdp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginBottom="@dimen/_6sdp">
+
+            <com.transparent.fleet.util.CustomTextViewBold
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:background="@null"
+                android:singleLine="true"
+                android:text="@{CardModel.name}"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_18sdp" />
+
+            <com.transparent.fleet.util.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:layout_weight="1"
+                android:gravity="right|center_vertical"
+                android:text="@string/pinNo"
+                android:textColor="@color/darkPink"
+                android:textSize="@dimen/_14sdp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:layout_marginBottom="@dimen/_6sdp">
+
+            <com.transparent.fleet.util.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:background="@null"
+                android:singleLine="true"
+                android:text="@{CardModel.cardno}"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14sdp" />
+
+            <com.transparent.fleet.util.CustomTextViewBold
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="right|center_vertical"
+                android:text="@{CardModel.pinno}"
+                android:textColor="@color/darkPink"
+                android:textSize="@dimen/_18sdp" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</layout>

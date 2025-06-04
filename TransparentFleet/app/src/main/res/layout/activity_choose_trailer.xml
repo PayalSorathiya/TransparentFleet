@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="TrailerListModel"
+            type="com.transparent.fleet.model.TrailerListModel" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/truck_bg"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/included"
+            layout="@layout/toolbar_layout" />
+
+        <com.transparent.fleet.util.CustomTextViewBold
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:gravity="center"
+            android:text="@string/welcome"
+            android:textColor="@color/txtColorBlue"
+            android:textSize="@dimen/_22sdp" />
+
+        <com.transparent.fleet.util.CustomTextViewBold
+            android:id="@+id/userName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:gravity="center"
+            android:text="Kevin"
+            android:textColor="@color/txtColorBlue"
+            android:textSize="@dimen/_22sdp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/llMian"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_margin="@dimen/_14sdp"
+                android:background="@drawable/white_round_bg"
+                android:gravity="bottom"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                <com.transparent.fleet.util.CustomTextViewBold
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/chooseTrailer"
+                    android:padding="@dimen/_18sdp"
+                    android:textColor="@color/txtHintColor"
+                    android:textSize="@dimen/_20sdp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/_18sdp"
+                    android:paddingRight="@dimen/_18sdp"
+                    android:paddingBottom="@dimen/_10sdp"/>
+
+            </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bottom_corner"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/_26sdp"
+                    android:paddingTop="@dimen/_20sdp"
+                    android:paddingRight="@dimen/_26sdp"
+                    android:paddingBottom="@dimen/_20sdp">
+
+
+                    <com.transparent.fleet.util.CustomTextViewBold
+                        android:id="@+id/txtContinue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingTop="@dimen/_10sdp"
+                        android:paddingBottom="@dimen/_10sdp"
+                        android:text="@string/txtcontinue"
+                        android:textColor="@{TrailerListModel.btnEnable?@color/white:@color/black}"
+                        android:background="@{TrailerListModel.btnEnable?@drawable/btn_fill_border:@drawable/btn_disable}"
+                        android:textSize="@dimen/_16sdp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+
+
+        </LinearLayout>
+    </LinearLayout>
+</layout>

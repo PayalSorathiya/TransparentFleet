@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="VehicleModel"
+            type="com.transparent.fleet.model.VehicleModel" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/llMian"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_margin="@dimen/_14sdp"
+            android:background="@drawable/white_round_bg"
+            android:gravity="bottom"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:padding="@dimen/_26sdp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="@dimen/_20sdp"
+                    android:layout_gravity="center|center_vertical">
+
+                    <com.transparent.fleet.util.CustomTextViewBold
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/addFuel"
+                        android:layout_weight="1"
+                        android:textColor="@color/txtColorBlue"
+                        android:textSize="@dimen/_20sdp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/imgClose"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_gravity="center_vertical"
+                        android:tint="@color/txtHintColor"
+                        android:backgroundTint="@color/txtHintColor"
+                        android:background="@drawable/ic_close" />
+                </LinearLayout>
+
+                <com.transparent.fleet.util.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:text="@string/selectVehicle"
+                    android:textColor="@color/darkPink"
+                    android:textSize="@dimen/_18sdp" />
+
+                <LinearLayout
+                    android:id="@+id/llTruck"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:background="@{VehicleModel.isTruck?@drawable/radio_bg_selected:@drawable/radio_bg}"
+                    android:gravity="center"
+                    android:padding="@dimen/_10sdp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:background="@{VehicleModel.isTruck?@drawable/radio_selected:@drawable/radio_round}" />
+
+                    <com.transparent.fleet.util.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:text="@string/truck"
+                        android:textColor="@{VehicleModel.isTruck?@color/white:@color/black}"
+                        android:textSize="@dimen/_14sdp"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llTrailer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@{VehicleModel.isTrailer?@drawable/radio_bg_selected:@drawable/radio_bg}"
+                    android:gravity="center"
+                    android:padding="@dimen/_10sdp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:background="@{VehicleModel.isTrailer?@drawable/radio_selected:@drawable/radio_round}" />
+
+                    <com.transparent.fleet.util.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:text="@string/trailer"
+                        android:textColor="@{VehicleModel.isTrailer?@color/white:@color/black}"
+                        android:textSize="@dimen/_14sdp"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bottom_corner"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/_26sdp"
+                android:paddingTop="@dimen/_20sdp"
+                android:paddingRight="@dimen/_26sdp"
+                android:paddingBottom="@dimen/_20sdp">
+
+                <com.transparent.fleet.util.CustomTextViewBold
+                    android:id="@+id/txtContinue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_10sdp"
+                    android:text="@string/txtcontinue"
+                    android:textColor="@{VehicleModel.btnEnable?@color/white:@color/black}"
+                    android:background="@{VehicleModel.btnEnable?@drawable/btn_fill_border:@drawable/btn_disable}"
+                    android:textSize="@dimen/_16sdp" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+</layout>

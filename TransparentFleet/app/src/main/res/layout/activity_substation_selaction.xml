@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="SubStationListModel"
+            type="com.transparent.fleet.model.SubStationListModel" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+
+
+
+        <LinearLayout
+            android:id="@+id/llMian"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_margin="@dimen/_14sdp"
+                android:background="@drawable/white_round_bg"
+                android:gravity="bottom"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_20sdp"
+                        android:layout_gravity="center|center_vertical"
+                        android:orientation="horizontal">
+
+                        <com.transparent.fleet.util.CustomTextViewBold
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/addFuel"
+                            android:textColor="@color/txtColorBlue"
+                            android:textSize="@dimen/_20sdp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/imgClose"
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="@dimen/_20sdp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/ic_close"
+                            android:backgroundTint="@color/txtHintColor"
+                            android:tint="@color/txtHintColor" />
+                    </LinearLayout>
+
+                    <com.transparent.fleet.util.CustomTextViewBold
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_20sdp"
+                        android:text="@string/trailerDetail"
+                        android:paddingLeft="@dimen/_18sdp"
+                        android:paddingRight="@dimen/_18sdp"                        android:textColor="@color/darkPink"
+                        android:textSize="@dimen/_20sdp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/_16sdp"
+                        android:paddingRight="@dimen/_16sdp">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recyclerView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/noData"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_centerInParent="true"
+                            android:text="@string/noDataFound"
+                            android:textSize="@dimen/_18sdp"
+                            android:visibility="gone" />
+
+                        <ProgressBar
+                            android:id="@+id/progressBar"
+                            android:layout_width="@dimen/_50sdp"
+                            android:layout_height="@dimen/_50sdp"
+                            android:layout_centerInParent="true"
+                            android:layout_gravity="center"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bottom_corner"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/_26sdp"
+                    android:paddingTop="@dimen/_20sdp"
+                    android:paddingRight="@dimen/_26sdp"
+                    android:paddingBottom="@dimen/_20sdp">
+
+                    <com.transparent.fleet.util.CustomTextViewBold
+                        android:id="@+id/txtContinue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingTop="@dimen/_10sdp"
+                        android:paddingBottom="@dimen/_10sdp"
+                        android:text="@string/txtcontinue"
+                        android:textColor="@{SubStationListModel.btnEnable?@color/white:@color/black}"
+                        android:background="@{SubStationListModel.btnEnable?@drawable/btn_fill_border:@drawable/btn_disable}"
+                        android:textSize="@dimen/_16sdp" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+</layout>

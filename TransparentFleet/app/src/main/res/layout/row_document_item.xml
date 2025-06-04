@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="DocumentModel"
+            type="com.transparent.fleet.model.DocumentModel" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/radio_bg"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:padding="@dimen/_10sdp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.transparent.fleet.util.CustomTextViewBold
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:text="@{DocumentModel.name}"
+                android:textColorHint="@color/black"
+                android:textSize="@dimen/_14sdp" />
+
+            <com.transparent.fleet.util.CustomTextViewBold
+                android:id="@+id/txtView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:layout_weight="1"
+                android:gravity="right|center_vertical"
+                android:text="@string/view"
+                android:textColor="@color/darkPink"
+                android:textSize="@dimen/_16sdp" />
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</layout>

@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="AddFuelInCarModel"
+            type="com.transparent.fleet.model.AddFuelInCarModel" />
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+
+        <LinearLayout
+            android:id="@+id/llMian"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:gravity="bottom"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_margin="@dimen/_14sdp"
+                android:background="@drawable/white_round_bg"
+                android:gravity="bottom"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_26sdp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|center_vertical"
+                        android:layout_marginBottom="@dimen/_20sdp"
+                        android:orientation="horizontal">
+
+                        <com.transparent.fleet.util.CustomTextViewBold
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/addFuel"
+                            android:textColor="@color/txtColorBlue"
+                            android:textSize="@dimen/_20sdp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/imgClose"
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="@dimen/_20sdp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/ic_close"
+                            android:backgroundTint="@color/txtHintColor"
+                            android:tint="@color/txtHintColor" />
+                    </LinearLayout>
+
+                    <com.transparent.fleet.util.CustomTextViewBold
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/carDetail"
+                        android:textColor="@color/darkPink"
+                        android:textSize="@dimen/_18sdp" />
+
+                    <com.transparent.fleet.util.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_30sdp"
+                        android:layout_marginBottom="@dimen/_8sdp"
+                        android:text="@string/ltrFuel"
+                        android:textColor="@color/darkPink"
+                        android:textSize="@dimen/_14sdp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/editbox_default_border"
+                        android:padding="@dimen/_12sdp">
+
+                        <com.transparent.fleet.util.CustomEditText
+                            android:id="@+id/ltrFuel"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.5"
+                            android:background="@null"
+                            android:hint="00"
+                            android:inputType="number"
+                            android:singleLine="true"
+                            android:textColor="@color/black" />
+
+                        <com.transparent.fleet.util.CustomTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="right"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:gravity="right|center_vertical"
+                            android:text="@string/litres"
+                            android:textColorHint="@color/txtHintColor" />
+                    </LinearLayout>
+
+                    <com.transparent.fleet.util.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_14sdp"
+                        android:layout_marginBottom="@dimen/_8sdp"
+                        android:text="@string/totalkm"
+                        android:textColor="@color/darkPink"
+                        android:textSize="@dimen/_14sdp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/editbox_default_border"
+                        android:padding="@dimen/_12sdp">
+
+
+                        <com.transparent.fleet.util.CustomEditText
+                            android:id="@+id/txtKm"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.5"
+                            android:background="@null"
+                            android:hint="XXXXX"
+                            android:inputType="number"
+                            android:singleLine="true"
+                            android:textColor="@color/black" />
+
+
+                        <com.transparent.fleet.util.CustomTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="right"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:gravity="right|center_vertical"
+                            android:text="@string/km"
+                            android:textColorHint="@color/txtHintColor" />
+                    </LinearLayout>
+
+                    <com.transparent.fleet.util.CustomTextView
+                        android:id="@+id/txtUserKm"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:hint="XXXXX"
+                        android:paddingLeft="@dimen/_12sdp"
+                        android:paddingTop="@dimen/_6sdp"
+                        android:paddingRight="@dimen/_12sdp"
+                        android:paddingBottom="@dimen/_6sdp"
+                        android:singleLine="true"
+                        android:textColor="@color/txtColorBlue"
+                        android:textSize="@dimen/_8sdp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bottom_corner"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/_26sdp"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:paddingRight="@dimen/_26sdp"
+                    android:paddingBottom="@dimen/_20sdp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/imgBack"
+                            android:layout_width="@dimen/_45sdp"
+                            android:layout_height="@dimen/_45sdp"
+                            android:layout_marginRight="@dimen/_15sdp"
+                            android:background="@color/txtHintColor"
+                            android:gravity="center"
+                            android:padding="@dimen/_16sdp"
+                            android:src="@drawable/small_back"
+                            android:text="@string/txtcontinue"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_16sdp" />
+
+                        <com.transparent.fleet.util.CustomTextViewBold
+                            android:id="@+id/txtContinue"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@{AddFuelInCarModel.isSelected?@drawable/btn_fill_border:@drawable/btn_disable}"
+                            android:gravity="center"
+                            android:paddingTop="@dimen/_10sdp"
+                            android:paddingBottom="@dimen/_10sdp"
+                            android:text="@string/txtcontinue"
+                            android:textColor="@{AddFuelInCarModel.isSelected?@color/white:@color/black}"
+                            android:textSize="@dimen/_16sdp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+</layout>

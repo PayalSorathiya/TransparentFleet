@@ -1,0 +1,89 @@
+<resources>
+    <string name="app_name">Transparent Fleet</string>
+
+    <string name="welcomeTitle">Welcome,\nLet\’s get you in..</string>
+    <string name="welcomeMsg">It\’s really easy to this use app and keep you safe and sound along with having control over your working performance.</string>
+    <string name="getStarted">Get Started</string>
+
+    <string name="fiilDetail">Fill in the details</string>
+    <string name="loginMsg">This should be given to you by your administrator.</string>
+    <string name="userName">Username</string>
+    <string name="password">Password</string>
+    <string name="enterUserName">Enter your username</string>
+    <string name="enterPassword">Enter your password</string>
+    <string name="forgotPass">Forgot Password?</string>
+    <string name="login">Login</string>
+
+    <string name="passwordReset">Password Reset</string>
+    <string name="resetMsg">Enter your username and we will e-mail you a password reset link.</string>
+    <string name="changePass">Change Password</string>
+
+
+    <string name="chooseTruck">Choose truck</string>
+    <string name="choosecar">Choose car</string>
+    <string name="welcome">Welcome,</string>
+    <string name="txtcontinue">Continue</string>
+
+
+    <string name="chooseTrailer">Choose trailer</string>
+    <string name="addFuel">Add fuel</string>
+    <string name="fuelHistory">Fuel history</string>
+    <string name="inspection">Inspection</string>
+    <string name="services">Services</string>
+
+
+    <string name="whichStation">Which fuel station are you fueling at?</string>
+    <string name="depotStation">Depot fuel station</string>
+    <string name="otherStation">Other fuel stations</string>
+    <string name="selectVehicle">Select Vehicle</string>
+    <string name="truck">Truck</string>
+    <string name="trailer">Trailer</string>
+    <string name="car">Car</string>
+    <string name="driver">Driver</string>
+    <string name="truckDetail">Fill in fuel details for truck</string>
+    <string name="carDetail">Fill in fuel details for car</string>
+    <string name="ltrFuel">Liters fueled</string>
+    <string name="totalkm">Total Kilometers</string>
+    <string name="litres">Litres</string>
+    <string name="km">KM</string>
+    <string name="trailerDetail">Fill in details for trailer</string>
+    <string name="totalhour">Total Hours</string>
+    <string name="hours">Hours</string>
+
+
+    <string name="history">History</string>
+
+    <string name="atTotalHour">At Total Hours</string>
+    <string name="checkhistory">Check History</string>
+    <string name="finish">Finish</string>
+    <string name="atTotalKm">At Kilometers</string>
+    <string name="inspectionHistory">Inspection History</string>
+    <string name="pending">Pending</string>
+    <string name="done">Done</string>
+    <string name="due">Due</string>
+    <string name="serviceHistory">Service History</string>
+    <string name="needBelongings">Need your belongings?</string>
+    <string name="viewDoc">View Documents</string>
+    <string name="yourAvg">Your Average</string>
+    <string name="fleetAvg">Fleet Average</string>
+    <string name="lpkm">L/100KM</string>
+
+    <string name="yourcardpin">Your card pins</string>
+    <string name="view">View</string>
+    <string name="pinNo">PIN</string>
+
+
+
+
+    <string name="noDataFound">No Data Found</string>
+    <string name="noInspectionFound">No Inspection Today</string>
+    <string name="noServiceFound">No Service Today</string>
+    <string name="position">position</string>
+    <string name="retry">Retry</string>
+    <string name="noInternetConnectivity">Oops Internet is not Working.</string>
+    <string name="noInternet">Please Check your internet connection</string>
+    <string name="app_exit">Are you sure you want to Logout?</string>
+
+
+
+</resources>

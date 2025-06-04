@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="LoginModel"
+            type="com.transparent.fleet.model.LoginModel" />
+
+    </data>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/app_bg"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/included"
+                layout="@layout/toolbar_layout" />
+
+
+            <LinearLayout
+                android:id="@+id/llMian"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <LinearLayout
+                    android:id="@+id/container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_margin="@dimen/_14sdp"
+                    android:background="@drawable/blue_round_bg"
+                    android:gravity="bottom"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:paddingLeft="@dimen/_26sdp"
+                        android:paddingTop="@dimen/_26sdp"
+                        android:paddingRight="@dimen/_26sdp"
+                        android:paddingBottom="@dimen/_16sdp">
+
+                        <com.transparent.fleet.util.CustomTextViewBold
+                            android:id="@+id/hrader"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/fiilDetail"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_18sdp" />
+
+                        <com.transparent.fleet.util.CustomTextView
+                            android:id="@+id/title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_14sdp"
+                            android:alpha="0.7"
+                            android:text="@string/loginMsg"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_14sdp" />
+
+                        <com.transparent.fleet.util.CustomTextView
+                            android:id="@+id/txtUserName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_14sdp"
+                            android:layout_marginBottom="@dimen/_8sdp"
+                            android:text="@string/userName"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_14sdp" />
+
+                        <com.transparent.fleet.util.CustomEditText
+                            android:id="@+id/edtUsername"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/editbox_selected_border"
+                            android:hint="@string/enterUserName"
+                            android:padding="@dimen/_12sdp"
+                            android:singleLine="true"
+                            android:textSize="@dimen/_14sdp"
+                            android:textColorHint="@color/txtHintColor" />
+
+                        <com.transparent.fleet.util.CustomTextView
+                            android:id="@+id/txtpass"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_14sdp"
+                            android:layout_marginBottom="@dimen/_8sdp"
+                            android:text="@string/password"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_14sdp" />
+
+                        <com.transparent.fleet.util.CustomEditText
+                            android:id="@+id/edtPass"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/editbox_selected_border"
+                            android:hint="@string/enterPassword"
+                            android:padding="@dimen/_12sdp"
+                            android:singleLine="true"
+                            android:inputType="textPassword"
+                            android:textSize="@dimen/_14sdp"
+                            android:textColorHint="@color/txtHintColor" />
+
+                        <com.transparent.fleet.util.CustomTextView
+                            android:id="@+id/txtForgot"
+                            android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_14sdp"
+                            android:layout_marginBottom="@dimen/_8sdp"
+                            android:text="@string/forgotPass"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_14sdp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingLeft="@dimen/_26sdp"
+                        android:paddingTop="@dimen/_10sdp"
+                        android:paddingRight="@dimen/_26sdp"
+                        android:paddingBottom="@dimen/_18sdp">
+
+                        <com.transparent.fleet.util.CustomTextViewBold
+                            android:id="@+id/txtLogin"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/btn_fill_border"
+                            android:gravity="center"
+                            android:paddingTop="@dimen/_10sdp"
+                            android:paddingBottom="@dimen/_10sdp"
+                            android:text="@string/login"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_16sdp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</layout>

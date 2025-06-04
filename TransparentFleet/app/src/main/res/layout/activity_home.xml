@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="HomeModel"
+            type="com.transparent.fleet.model.HomeModel" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/app_bg"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/included"
+            layout="@layout/toolbar_layout" />
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <com.transparent.fleet.util.AutoScrollViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:background="@drawable/home_bg"
+            android:orientation="vertical"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:layout_marginRight="@dimen/_14sdp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:id="@+id/llAddFuel"
+                    android:layout_width="@dimen/_118sdp"
+                    android:layout_height="@dimen/_118sdp"
+                    android:layout_marginRight="@dimen/_20sdp"
+                    android:background="@drawable/home_whitebg"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:layout_margin="@dimen/_8sdp"
+                        android:padding="@dimen/_8sdp"
+                        android:src="@drawable/add_fuel" />
+
+                    <com.transparent.fleet.util.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="@string/addFuel"
+                        android:textColor="@color/txtColorBlue"
+                        android:textSize="@dimen/_15sdp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/llFuelHistory"
+                    android:layout_width="@dimen/_118sdp"
+                    android:layout_height="@dimen/_118sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/home_whitebg"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:layout_margin="@dimen/_8sdp"
+                        android:padding="@dimen/_8sdp"
+                        android:src="@drawable/history" />
+
+                    <com.transparent.fleet.util.CustomTextView
+                        android:id="@+id/customTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="@string/fuelHistory"
+                        android:textColor="@color/txtColorBlue"
+                        android:textSize="@dimen/_15sdp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_14sdp"
+                android:layout_marginBottom="@dimen/_14sdp"
+                android:layout_weight="1"
+
+                android:gravity="center"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:id="@+id/llIncpection"
+                    android:layout_width="@dimen/_118sdp"
+                    android:layout_height="@dimen/_118sdp"
+                    android:layout_marginRight="@dimen/_20sdp"
+                    android:background="@drawable/home_whitebg"
+                    android:gravity="center"
+                   android:visibility="gone"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:layout_margin="@dimen/_8sdp"
+                        android:padding="@dimen/_8sdp"
+                        android:src="@drawable/inspection" />
+
+                    <com.transparent.fleet.util.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="@string/inspection"
+                        android:textColor="@color/txtColorBlue"
+                        android:textSize="@dimen/_15sdp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/llService"
+                    android:layout_width="@dimen/_118sdp"
+                    android:layout_height="@dimen/_118sdp"
+                    android:background="@drawable/home_whitebg"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:layout_margin="@dimen/_8sdp"
+                        android:padding="@dimen/_8sdp"
+                        android:src="@drawable/services" />
+
+                    <com.transparent.fleet.util.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="@string/services"
+                        android:textColor="@color/txtColorBlue"
+                        android:textSize="@dimen/_15sdp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <com.transparent.fleet.util.CustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/_10sdp"
+            android:text="@string/needBelongings"
+            android:textColor="@color/txtColorBlue"
+            android:textSize="@dimen/_15sdp"
+            android:textStyle="bold" />
+
+        <com.transparent.fleet.util.CustomTextViewBold
+            android:id="@+id/viewDoc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/_40sdp"
+            android:layout_marginRight="@dimen/_40sdp"
+            android:background="@drawable/editbox_default_border"
+            android:gravity="center"
+            android:padding="@dimen/_8sdp"
+            android:text="@string/viewDoc"
+            android:textColor="@color/txtColorBlue"
+            android:textSize="@dimen/_15sdp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="@dimen/_20sdp"
+            android:paddingBottom="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_gravity="bottom"
+            android:gravity="bottom"
+            android:background="@color/darkPink">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <com.transparent.fleet.util.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="@dimen/_2sdp"
+                    android:text="@string/yourAvg"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_14sdp"
+                    android:textStyle="bold" />
+
+                <com.transparent.fleet.util.CustomTextViewBold
+                    android:id="@+id/txtYourAvg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="@dimen/_2sdp"
+                    android:text="8.53"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_26sdp"
+                    android:textStyle="bold" />
+
+                <com.transparent.fleet.util.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="@dimen/_2sdp"
+                    android:text="@string/lpkm"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_14sdp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <com.transparent.fleet.util.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="@dimen/_2sdp"
+                    android:text="@string/fleetAvg"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_14sdp"
+                    android:textStyle="bold" />
+
+                <com.transparent.fleet.util.CustomTextViewBold
+                    android:id="@+id/txtFleetAvg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="@dimen/_2sdp"
+                    android:text="9.53"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_26sdp"
+                    android:textStyle="bold" />
+
+                <com.transparent.fleet.util.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="@dimen/_2sdp"
+                    android:text="@string/lpkm"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_14sdp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+</layout>

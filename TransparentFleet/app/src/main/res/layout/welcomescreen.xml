@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="MainModel"
+            type="com.transparent.fleet.model.MainModel" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/app_bg"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_70sdp"
+            android:layout_gravity="left"
+            android:layout_marginLeft="@dimen/_34sdp"
+            android:layout_marginTop="@dimen/_34sdp"
+            android:background="@drawable/ic_truck_red" />
+
+        <ImageView
+            android:layout_width="@dimen/_222sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_gravity="left"
+            android:layout_marginLeft="@dimen/_34sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="@drawable/app_name" />
+
+
+        <LinearLayout
+            android:id="@+id/llMian"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/_14sdp"
+            android:layout_weight="1">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@drawable/blue_round_bg"
+                android:gravity="bottom"
+                android:orientation="vertical"
+                android:padding="@dimen/_30sdp">
+
+                <com.transparent.fleet.util.CustomTextViewBold
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/welcomeTitle"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_20sdp" />
+
+                <com.transparent.fleet.util.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_14sdp"
+                    android:alpha="0.7"
+                    android:text="@string/welcomeMsg"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_14sdp" />
+
+                <com.transparent.fleet.util.CustomTextViewBold
+                    android:id="@+id/txtStarted"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_14sdp"
+                    android:background="@drawable/btn_fill_border"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_10sdp"
+                    android:text="@string/getStarted"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_16sdp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+</layout>

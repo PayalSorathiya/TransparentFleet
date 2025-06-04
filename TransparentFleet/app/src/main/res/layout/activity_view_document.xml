@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="DocumentListModel"
+            type="com.transparent.fleet.model.DocumentListModel" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:id="@+id/llMian"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/_14sdp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/white_round_bg"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_18sdp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|center_vertical"
+                        android:orientation="horizontal">
+
+                        <com.transparent.fleet.util.CustomTextViewBold
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/viewDoc"
+                            android:textColor="@color/txtColorBlue"
+                            android:textSize="@dimen/_20sdp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/imgClose"
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="@dimen/_20sdp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/ic_close"
+                            android:backgroundTint="@color/txtHintColor"
+                            android:tint="@color/txtHintColor" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fillViewport="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.transparent.fleet.util.CustomTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:padding="@dimen/_4sdp"
+                            android:text="@string/yourcardpin"
+                            android:textColor="@color/darkPink"
+                            android:textSize="@dimen/_12sdp" />
+
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recyclerView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginRight="@dimen/_10sdp" />
+
+                        <com.google.android.material.tabs.TabLayout
+                            android:id="@+id/tabs"
+                            style="@style/TabLayoutStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            app:tabIndicatorColor="@color/darkPink"
+                            app:tabIndicatorFullWidth="false"
+                            app:tabIndicatorHeight="@dimen/_2sdp"
+                            app:tabMode="fixed"
+                            app:tabSelectedTextColor="@color/darkPink"
+                            app:tabTextAppearance="@style/TabLayoutStyle"
+                            app:tabTextColor="@color/blueBg">
+
+
+                            <com.google.android.material.tabs.TabItem
+                                android:id="@+id/tabTruck"
+                                style="@style/tab_item"
+                                android:text="@string/truck" />
+
+                            <com.google.android.material.tabs.TabItem
+                                android:id="@+id/tabTrailer"
+                                style="@style/tab_item"
+                                android:text="@string/trailer" />
+
+                            <com.google.android.material.tabs.TabItem
+                                android:id="@+id/tabDriver"
+                                style="@style/tab_item"
+                                android:text="@string/driver" />
+
+
+                        </com.google.android.material.tabs.TabLayout>
+
+                        <androidx.viewpager.widget.ViewPager
+                            android:id="@+id/viewpager"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+
+
+                    </LinearLayout>
+
+                </ScrollView>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+</layout>
